@@ -8,7 +8,7 @@ import { ListaEmpleadosComponent } from './components/lista-empleados/lista-empl
 import { CrearEmpleadosComponent } from './components/crear-empleados/crear-empleados.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //Clases firebase
 import{AngularFireModule} from '@angular/fire/compat';
 import{AngularFireAuthModule} from '@angular/fire/compat/auth';
@@ -21,7 +21,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import { ModalComponent } from './components/modal/modal.component';
+import { ModalComponent } from './components/modal/modal.component';
 //import { ModalComponent } from './componets/modal/modal.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { NgbAlertModule, NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
@@ -38,7 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CrearEmpleadosComponent,
     NavbarComponent,
     FooterComponent,
-    //ModalComponent
+    ModalComponent
 
 
   ],
