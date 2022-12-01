@@ -1,0 +1,56 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card body">
+      <span class="h3">Actualizador de Stock</span>
+      <div>
+        <button class="float-end btn btn-dark btn-lg" routerLink='/crear'>Agregar</button>
+      </div>
+      <h5 *ngIf="empleados.length ==0" style="margin-top: 30px"> No hay datos para mostrar</h5>
+     <!-- <button class="btn btn-dark btn-lg">Agregar</button> -->
+      <table *ngIf="empleados.length >0"class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Costo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of empleados">
+          <!-- <tr *ngFor="let item of items |async"> -->
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.dni}}</td>
+            <td>{{empleado.salario}}</td>
+            <td>
+              <!-- |currency -->
+              <i style="margin-right: 10px; cursor: pointer;" class="fas fa-user-edit text-info"[routerLink]="['/editar/',empleado.id]"></i>
+              <i style="cursor: pointer;" (click)="eliminarEmpleado(empleado.id)" class="fa-lg fas fa-trash text-danger "></i>
+              <!-- <button style="margin-right: 15px;" class="btn btn-info btn-sm">Editar</button>
+              <button (click)="eliminarEmpleado(empleado.id)" class="btn btn-danger btn-sm">Eliminar</button> -->
+            </td>
+          </tr>
+
+          <!-- <tr>
+              <td>Gabi</td>
+              <td>Castro</td>
+              <td>298743950</td>
+              <td>298743950</td>
+              <td>
+                <i style="margin-right: 10px; cursor: pointer;" class="fas fa-user-edit text-info"></i>
+                <i style="cursor: pointer;" class="fa-lg fas fa-trash text-danger "></i> -->
+                <!-- <button style="margin-right: 15px;" class="btn btn-info btn-sm">Editar</button>
+                <button class="btn btn-danger btn-sm">Eliminar</button>
+              </td> -->
+              <!-- <td>
+                  <i class="fad fa-user-edit"></i>
+              </td> -->
+          <!-- </tr>  -->
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+footer{
+  /* background-image: url('./assets/fondo.jpg'); */
+  background-color: rgb(20, 218, 191);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 5vh;
+}
